@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Upload</title>
+    <link rel="stylesheet" href="documentupload.css">
+
+</head>
+<body>
+    <div class="sidebar">
+        <button class="create-project-btn" onclick="location.href='projectcreate.html'">+ Create new Project</button>
+        <div class="selected-projects">
+            <div id="selected-project">No project selected</div>
+        </div> 
+    </div>
+    <div class="horizontal-separator"></div>
+    <div class="headbar">
+        <div class="nav-items">
+            <div class="nav-item"><a href="projectselectande.html">Projects</a></div>
+            <div class="nav-item"><a href="documentselect.html">Document</a></div>
+            <div class="nav-item"><a href="questionnaire.html">Questionnaire</a></div>
+            <div class="nav-item"><a href="createreport.html">Report</a></div>
+            <div class="nav-item"><a href="categories.html">Categories</a></div>
+        </div>
+        <div class="user-icons">
+            <img src="user-icon.png" alt="User">
+            <img src="question-icon.png" alt="Help">
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="tabs">
+            <button class="tab" onclick="location.href='documentselect.html'">View Documents</button>
+            <button class="tab active" onclick="showTab('upload-document')">Upload Document</button>
+        </div>
+        <div id="upload-document" class="tab-content active">
+            <div class="upload-section">
+                <h1>Upload Project Document</h1>
+                <p>Please upload your project documents below:</p>
+                <div class="upload-area" id="uploadArea" style="margin-left: 45px; width:800px">
+                    <p>Drag & drop files here or <span class="browse-link" onclick="triggerFileInput()">browse</span></p>
+                    <input type="file" id="fileInput" multiple style="display: none;">
+                </div>
+                <div class="upload-progress" id="uploadProgress"></div>
+                <button id="save-btn" style="margin-left: 45px;" onclick="saveFiles()">Save</button>
+            </div>
+        </div>
+    </div>
+    <script src="documentupload.js"></script>
+</body>
+</html>

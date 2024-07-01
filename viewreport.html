@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Report</title>
+    <link rel="stylesheet" href="viewreport.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <button class="create-project-btn" onclick="location.href='projectcreate.html'">+ Create new Project</button>
+            <div class="selected-projects">
+                <div id="selected-project-details">No project selected</div>
+            </div> 
+        </div>
+        <div class="horizontal-separator"></div>
+        <div class="main-content">
+            <header class="headbar">
+                <nav class="nav-items">
+                    <div class="nav-items">
+                        <div class="nav-item"><a href="projectselectande.html">Projects</a></div>
+                        <div class="nav-item"><a href="documentselect.html">Document</a></div>
+                        <div class="nav-item"><a href="questionnaire.html">Questionnaire</a></div>
+                        <div class="nav-item"><a href="createreport.html">Report</a></div>
+                        <div class="nav-item"><a href="categories.html">Categories</a></div>
+                    </div>                    
+                </nav>
+                <div class="user-icons">
+                    <img src="profile-icon.png" alt="Profile Icon">
+                </div>
+            </header>
+            <div class="tabs">
+                <button class="tab" id="create-report-tab">Create Report</button>
+                <button class="tab active" id="view-report-tab">View Reports</button>
+            </div>
+            <div id="create-report" class="tab-content">
+                <!-- Create Report Content -->
+                <h2>Create Report Section</h2>
+                <!-- Add your create report content here -->
+            </div>
+            <div id="view-report" class="tab-content active" style="margin-top: 50px;">
+                <label for="report-dropdown" style="margin-left: 45px;">Select Report:</label>
+                <select id="report-dropdown" style="width: 600px;">
+                    <option value="pp-01-test">Report For bello</option>
+                    <option value="pp-01-test">Report For hh</option>
+                    <option value="pp-01-test">Report For hello</option>
+                </select>
+                <button id="load-report-btn" style="color: white; background-color: #002D54;">Load</button>
+                <button id="delete-report-btn" style="color: white; background-color: #002D54;">Delete</button>
+            </div>
+            <div id="report-content" style="margin-top: 20px; width:800px; margin-left: 45px;">
+                <!-- Report content will be loaded here -->
+            </div>
+        </div>
+    </div>
+    <script src="viewreport.js"></script>
+</body>
+</html>

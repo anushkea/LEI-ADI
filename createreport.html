@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Report</title>
+    <link rel="stylesheet" href="createreport.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <button class="create-project-btn" onclick="location.href='projectcreate.html'">+ Create new Project</button>
+            <div class="selected-projects">
+                <div id="selected-project-details">No project selected</div>
+            </div> 
+        </div>
+        <div class="horizontal-separator"></div>
+        <div class="main-content">
+            <header class="headbar">
+                <nav class="nav-items">
+                    <div class="nav-items">
+                        <div class="nav-item"><a href="projectselectande.html">Projects</a></div>
+                        <div class="nav-item"><a href="documentselect.html">Document</a></div>
+                        <div class="nav-item"><a href="questionnaire.html">Questionnaire</a></div>
+                        <div class="nav-item"><a href="createreport.html">Report</a></div>
+                        <div class="nav-item"><a href="categories.html">Categories</a></div>
+                    </div>                    
+                </nav>
+                <div class="user-icons">
+                    <img src="profile-icon.png" alt="Profile Icon">
+                </div>
+            </header>
+            <div class="report-section">
+                <div class="tabs">
+                    <button class="tab active" onclick="showTab('create-report')">Create Report</button>
+                    <button class="tab" onclick="location.href='viewreport.html'">View Reports</button>
+                </div>
+                <div id="create-report" class="tab-content">
+                    <h2 style="font-size: 16px;">1. Create report</h2>
+                    <input type="text" placeholder="Enter report name" id="report-name" class="blue-textbox-input">
+                    <span id="report-name-required" class="required-text">* This field is required</span>
+                    <h2 style="font-size: 16px;">2. Select questionnaire</h2>
+                    <p style="font-size: 10px;">Please select questionnaire from the available below.</p>
+                    <div class="dropdown" onclick="toggleDropdown('questionnaire-dropdown')">
+                        <button id="questionnaire-dropdown-btn" class="dropdown-btn">Available questionnaires ▼</button>
+                        <div id="questionnaire-dropdown" class="dropdown-content">
+                            <!-- Options will be dynamically populated -->
+                        </div>
+                    </div>
+                    <span id="questionnaire-required" class="required-text">* This field is required</span>
+                    <div id="selected-questionnaires" class="selected-items"></div>
+                    <h2 style="font-size: 16px;">3. Select Document</h2>
+                    <p style="font-size: 10px;">Please select document/s from the available below.</p>
+                    <div class="dropdown" onclick="toggleDropdown('documents-dropdown')">
+                        <button id="documents-dropdown-btn" class="dropdown-btn">Available documents ▼</button>
+                        <div id="documents-dropdown" class="dropdown-content">
+                            <!-- Options will be dynamically populated -->
+                        </div>
+                    </div>
+                    <span id="documents-required" class="required-text">* This field is required</span>
+                    <div id="selected-documents" class="selected-items"></div>
+                    <button class="submit-btn" onclick="submitForm()">Submit</button>
+                    <div id="message" class="message"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="createreport.js"></script>
+        
+</body>
+</html>

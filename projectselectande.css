@@ -1,0 +1,232 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background-color: #002D54;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.create-project-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #002D54;
+    color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+    outline: none;
+    margin-top: 120px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.create-project-button:hover {
+    background-color: #ffffff;
+    color: #002D54;
+}
+
+/* Styles for selected project */
+#selected-project {
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: white;
+}
+
+/* Main Content Styles */
+.main-content {
+    width: calc(100% - 260px);
+    display: flex;
+    flex-direction: column;
+    margin-left: 260px;
+}
+
+.headbar {
+    width: calc(100% - 260px);
+    height: 106px;
+    background-color: #002D54;
+    position: fixed;
+    top: 0;
+    left: 260px;
+    z-index: 1;
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.horizontal-separator {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    position: fixed;
+    top: 106px; /* Adjust to the exact height of the headbar */
+    left: 0;
+    z-index: 2;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-item::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 40px;
+    background-color: white;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-item:first-child::before {
+    display: none;
+}
+
+.nav-item:hover::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.user-icons {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.user-icons img {
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.project-section {
+    padding: 20px;
+    margin-top: 107px; /* Adjust according to the horizontal line */
+}
+
+.project-section h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 45px;
+    top: 10px;
+}
+
+.project-section h2 {
+    font-size: 16px;
+    position: relative;
+    margin-top: 50px;
+    left: 45px;
+}
+
+.project-section p {
+    font-size: 10px;
+    color: #555;
+    position: relative;
+    margin-top: 10px;
+    left: 45px;
+    max-width: 630px;
+}
+
+table {
+    width: calc(100% - 100px);
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-left: 45px;
+    background-color: white;
+}
+
+table th, table td {
+    border: 1px solid #666; /* Darken the lines */
+    padding: 10px;
+    text-align: left;
+    background-color: white;
+}
+
+table th {
+    background-color: white;
+}
+
+table td[contenteditable="true"] {
+    background-color: white;
+}
+
+.delete-btn, .cancel-btn {
+    background-color: #002D54;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.submit-btn {
+    background-color: #002D54;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 45px;
+}
+
+.submit-btn:hover {
+    background-color: #D2E1EB;
+    color: black;
+}
+
+.success-message {
+    color: green;
+    margin-left: 45px;
+    font-size: 14px;
+}
+
+tr.selected {
+    background-color: #D2E1EB;
+}
