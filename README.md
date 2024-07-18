@@ -129,7 +129,7 @@ Welcome to the UI Summer Internship 2024 GitHub repository! This project display
 
 
 
-## week 3
+## Week 3
 ### 03rd June 2024
 - tried my best to finish and review all the sketches before actual submission and started on the project after sketches were foolproof
 
@@ -186,7 +186,7 @@ Welcome to the UI Summer Internship 2024 GitHub repository! This project display
 
 
 
-## week 4
+## Week 4
 ### 10th June 2024
 - Started working on the project and making the respective pages
 - learning about new and improved features of the project in js
@@ -235,7 +235,7 @@ Welcome to the UI Summer Internship 2024 GitHub repository! This project display
 - Leveraged ongoing learning to enhance project development skills.
 
 
-## week 5
+## Week 5
 ### 18th June 2024
 - Continued making the pages for the website.
 
@@ -285,7 +285,7 @@ Welcome to the UI Summer Internship 2024 GitHub repository! This project display
 
 
 
-## week 6
+## Week 6
 ### 24th June 2024
 - Continued making the pages for the website.
 - figuring out the logic for questionnaire page and fetching of .xlsx format files only.
